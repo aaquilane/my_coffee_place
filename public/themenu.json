@@ -1,0 +1,160 @@
+[
+    {
+        "category_name": "SANDWICHES",
+           "id": "11",
+           "name": "Cooked Ham",
+           "description": "Original homemade artisan white bread sandwich with delicious cooked ham slices.",
+           "price": 3.5,
+           "original_price": 4,
+           "discount": "10%",
+           "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/3d2ebd17-79c4-4b2b-866e-b2fef0acb05d.jpg" 
+           
+         },
+         {
+        "category_name": "SANDWICHES",
+           "id": "12",
+           "name": "Ensaladilla",
+           "description": "The world's most famous sandwich.Made with tender artisan sandwich bread and a soft tuna spread, artichokes,boiled eggs, peas and red peppers.",
+           "price": 3.5,
+           "original_price": 4,
+           "discount": "10%",
+           "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/d7ad8670-d233-4922-b9c9-be4f9cb7d011.jpg" 
+           
+         },
+         {
+        "category_name": "SANDWICHES",
+           "id": "13",
+           "name": "Serrano Ham",
+           "description": "Artisan white bread sandwich, baked to perfection combined with delicious “Paleta Serrana” ham. This sandwich is one of the first sandwiches prepared in the Plaza del Callao deli.",
+           "price": 3.5,
+           "original_price": 4,
+           "discount": "10%",
+           "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/a958ed70-e00f-4f83-83f4-49b76875113f.jpg" 
+           
+         },
+         {
+        "category_name": "SANDWICHES",
+           "id": "14",
+           "name": "Cheese With Tomato",
+           "description": "A sandwich that you don't need to eat with anything else. Special sandwich bread, soft cream cheese and tomato.",
+           "price": 3.5,
+           "original_price": 4,
+           "discount": "10%",
+           "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/a746cc92-1c90-45f1-a02c-5de566fcb80a.jpg" 
+           
+         },
+         {
+        "category_name": "SANDWICHES",
+           "id": "15",
+           "name": "Smoked Fish",
+           "description": "Bread sandwich and a mix spread prepared with North Sea smoked salmon, boiled eggs, green, onions and capers.",
+           "price": 3.5,
+           "original_price": 4,
+           "discount": "10%",
+           "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/9f50a87d-d9dc-4a72-bbb6-0399aedacefb.jpg" 
+           
+         },
+         {
+        "category_name": "SANDWICHES",
+           "id": "16",
+           "name": "Bacon And Egg",
+           "description": "The softness of our sandwich bread and the unmistakable flavor of crisp bacon and egg.",
+           "price": 3.5,
+           "original_price": 4,
+           "discount": "10%",
+           "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/781b034d-56c1-486b-8998-c9cffb1405f2.jpg" 
+           
+         },
+        {
+        "category_name": "SALADS",
+               "id": "21",
+               "name": "Cesar Salad",
+               "description": "Rustic lettuce and juicy chicken breast seasoned with Reggiano parmesan cheese, crunchy croutons and authentic Caesar dressing.",
+               "price": 12,
+               "original_price": 13.5,
+               "discount": "10%",
+               "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/52e60331-757e-40ab-b5d5-59d2059c7abb.jpg" 
+             },
+        {
+        "category_name": "SALADS",
+               "id": "22",
+               "name": "Mediterranean Salad",
+               "description": "Fresh rustic lettuce with delicious tuna, hard cooked eggs, natural tomato, black olives",
+               "price": 12,
+               "original_price": 13.5,
+               "discount": "10%",
+               "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/d5be064b-47f8-43de-b78e-0c2ee213f943.jpg"  
+             },
+         {
+        "category_name": "SALADS",
+               "id": "23",
+               "name": "Chicken Wrap",
+               "description": "Delicious wheat crepe with chicken breast and spinach",
+               "price": 12,
+               "original_price": 13.5,
+               "discount": "10%",
+               "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/a0c438af-bc55-42a5-b3fe-4f78201c9118.jpg" 
+             },
+        {
+        "category_name": "SALADS",
+               "id": "24",
+               "name": "Smoked Salmon Wrap",
+               "description": "Delicious wheat crepe with smoked salmon",
+               "price": 3.5,
+               "original_price": 4,
+               "discount": "10%",
+               "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/6d7e44e9-4b20-4278-8e1f-596aba67a4a5.jpg"
+             },
+        {
+        "category_name": "JUICES",
+               "id": "31",
+               "name": "Orange Juice",
+               "description": "We select the best fresh fruit for our 100% freshly squeezed orange juice",
+               "price": 5.95,
+               "original_price": 7,
+               "discount": "10%",
+               "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/d996cf51-697f-4613-9b26-ab0421bc664a.jpg"              
+             },
+         {
+        "category_name": "JUICES",
+               "id": "32",
+               "name": "Carrot And Ginger Smoothie              ",
+               "description": "Rich in Vitamin A, which provides benefits for the vision, and its Vitamin C content helps prevent colds and flu.",
+               "price": 5.95,
+               "original_price": 7,
+               "discount": "10%",
+               "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/dd27a113-ac2f-4eba-b70b-c469d8a2531a.jpg"  
+             },
+        {
+        "category_name": "JUICES",
+               "id": "33",
+               "name": "Apple And Cucumber Smoothie",
+               "description": "Due to is high content of folic acid (Vitamin B9), it promotes cell regeneration. Its mineral composition, calcium, iron and potassium helps in the bone formation and hormone synthesis.",
+               "price": 5.95,
+               "original_price": 7,
+               "discount": "10%",
+               "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/270c0959-e122-4a2d-bdb3-4e7eeea70e5f.jpg" 
+             },
+        {
+        "category_name": "JUICES",
+               "id": "34",
+               "name": "Chocolate Milkshake",
+               "description": "Milkshake made with our traditional gelato, very refreshing and nutritious with a wide variety of flavors. Chocolate, vanilla and red fruits.",
+               "price": 7.95,
+               "original_price": 9.5,
+               "discount": "10%",
+               "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/788418bb-b910-4210-aae5-2846a42b6059.jpg"
+             },
+        {
+        "category_name": "JUICES",
+               "id": "35",
+               "name": "Strawberry Milkshake",
+               "description": "Milkshake made with our traditional gelato, very refreshing and nutritious with a wide variety of flavors. Chocolate, vanilla and red fruits.",
+               "price": 7.95,
+               "original_price": 9.5,
+               "discount": "10%",
+               "image": "https://d2pjlw4ki9jzua.cloudfront.net/prod/sid_108/8d594b70-f7c4-481f-8f4e-42bd0898de86.jpg"
+             }
+   ]
+   
+ 
