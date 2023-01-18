@@ -13,6 +13,7 @@ import AlertDismissible from "./AlertDismissible";
 import { Link, Navigate } from "react-router-dom";
 
 import Toast from 'react-bootstrap/Toast';
+import Swal from 'sweetalert2'
 
 
 function Checkout () {
@@ -79,10 +80,15 @@ function Checkout () {
         const ordersCollectionRef = collection(db, "orders");
         await addDoc(ordersCollectionRef, myOrder).then(({ id }) => {
             setOrder(myOrder);
-
-            const msg = `Congratulations! Your purchase #${myOrder.order_id} has been confirmed!`    
+            const msg = `Congratulations! Your purchase #${id} has been confirmed!`    
             console.log(msg);
-            toast.info(msg, {position: toast.POSITION.BOTTOM_CENTER});
+            // toast.info(msg, {position: toast.POSITION.BOTTOM_CENTER});
+            
+            Swal.fire({
+                icon: "success",
+                title: "Contratulations!",
+                text: `Your purchase #${id} has been confirmed!` 
+              });
 
         });
         const data = await getDocs(ordersCollectionRef);

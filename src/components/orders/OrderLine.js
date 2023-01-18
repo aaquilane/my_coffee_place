@@ -9,7 +9,7 @@ function OrderLine ({myorder}){
 
     return (
          <tr key={myorder.id}>
-            <td>{myorder.order_id}</td>
+            <td>{myorder.id}</td>
             <td>{myorder.date}</td>
             <td>{productString === "" ? myorder.products_quantity : productString}</td>
             <td>${myorder.amount}</td>

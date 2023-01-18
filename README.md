@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Project
+This is the e-commerce for My Coffee Place
+
+
+# Installation
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

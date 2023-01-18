@@ -39,14 +39,15 @@ function ItemDetail ({menu}){
                         <h1> {product.name}</h1>
                         <h4>{product.description}</h4>
                         <br></br>
-                        <h1>${product.price}</h1>
-                        <h5>{product.discount}discount - Original price: {product.original_price}</h5>
                         
+                        <h1>${product.price}</h1>
+                        <h5 className="text-danger">{product.discount} OFF - <del className="text-secondary"> {product.original_price}</del></h5>
                         <br></br>
                         <br></br>
 
                         <input ref={quantityRef} type="number" id="typeNumber"  min="1" max="100" autoFocus />
-                        <p>Your are adding {productQuantity} products to cart</p>
+                        {/* <p>Your are adding {productQuantity} products to cart</p> */}
+                        <br></br>
                         <br></br>
                        
                         <button className="btn btn-warning" onClick={handleQtyChange}>Add to cart</button>

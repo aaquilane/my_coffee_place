@@ -9,7 +9,7 @@ function ItemListView({product}) {
             <Card  style={{width: '20rem' } }>
                 <Card.Img variant="top" src={product.image} />
                 <Card.ImgOverlay>
-                    <Card.Subtitle> {product.discount} Discount </Card.Subtitle>
+                    <Card.Subtitle className="text-danger"> {product.discount} OFF </Card.Subtitle>
                 </Card.ImgOverlay>
                 <Card.Body>
                     <Card.Title>{product.name} - ${product.price}</Card.Title>
