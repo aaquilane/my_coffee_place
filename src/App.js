@@ -18,6 +18,7 @@ function App() {
 
   const [endLoading, setEndLoading] = useState(false);
 
+  
   //******* CATEGORIES *******
   const [categ, setCateg] = useState([]);
   const categCollectionRef = collection(db, "categories");
