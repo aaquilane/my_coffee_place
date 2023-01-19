@@ -1,5 +1,5 @@
 // import image from "../images/coffeelayout_color.jpeg";
-import image from "../images/coffeelayout.webp";
+import image from "./images/coffeelayout.webp";
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -11,7 +11,6 @@ function Cover() {
     const ratio = '16x9';
 
     return (
-
         <Container fluid>
             {/* <Row>
                 <Col> */}

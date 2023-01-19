@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 import CartProductLine from "./CartProductLine";
-import Checkout from "../checkout/Checkout";
+import Checkout from "./Checkout";
 import EmptyEntity from "../EmptyEntity";
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
@@ -10,15 +10,14 @@ function CartDetail (){
     
     const {cartQuantity, cartPrice, cartProducts } = useContext(CartContext);
 
-    if (cartQuantity == 0) 
-        return (
-            <Container > 
+    return (
+        <>
+        {(cartQuantity == 0) ?
+            (<Container > 
                 <EmptyEntity message = {"Your cart is empty!"} />
-            </Container>
-        )
-    else
-        return (
-            <Container > 
+            </Container>)
+            :
+            ( <Container > 
                 <h4> Order summary </h4>
                 <Table responsive="sm">
                     <thead>
@@ -43,11 +42,11 @@ function CartDetail (){
                         </tr>
                     </tbody>
                 </Table>
-                <Checkout/>   
-                
-                     
-            </Container>
-        )
+                <Checkout/>    
+            </Container>)
+        }
+        </>
+    )
 }
 
 export default CartDetail

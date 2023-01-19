@@ -1,5 +1,5 @@
-import {  useParams } from 'react-router-dom';
-import ItemList from "../itemList/ItemList";
+import { useParams } from 'react-router-dom';
+import ItemList from "./ItemList";
 
 function ItemListContainer({menu}) {
     let { categoryName } = useParams();

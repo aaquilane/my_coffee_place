@@ -3,34 +3,25 @@ import { CartContext } from "../contexts/CartContext";
 import { useState } from "react";
 import { db } from "../../db/firebase-config.js";
 import { addDoc, collection, getDocs } from "firebase/firestore";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import ShowConfirmation from "./ShowConfirmation";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import AlertDismissible from "./AlertDismissible";
-import { Link, Navigate } from "react-router-dom";
-
-import Toast from 'react-bootstrap/Toast';
 import Swal from 'sweetalert2'
 
 
 function Checkout () {
     const {cartQuantity, cartPrice, cartProducts, emptyCart } = useContext(CartContext);
+
     const [orders, setOrders] = useState([]);
     const [order, setOrder] = useState({});
-    const [purchaseOk, setPurchaseOk] = useState(false);
     const ordersCollectionRef = collection(db, "orders");
+
     const [inputName, setInputName] = useState("");
     const [inputMail, setInputMail] = useState("");
-    
-
     const [inputRepeatMail, setInputRepeatMail] = useState({
         value: "",
         errMessage: "",
       })
-
     const [inputPhone, setInputPhone] = useState("");
     const [inputFulfillment, setInputFulfillment] = useState("Pick up");
     const [inputPaymentMethod, setInputPaymentMethod] = useState("Cash");
@@ -45,13 +36,11 @@ function Checkout () {
 
     function handleEmail (mail1, mail2) {
         let errMessage = ""
-
         if (mail1==="" || mail2==="")
             errMessage = "Email address can't be empty. Please try again"
         else
             if(mail1 !== mail2 ) 
                 errMessage = "The email addresses don't match. Please try again"
-            
         setInputRepeatMail((prevState) => ({ ...prevState, errMessage }));
     }
 
@@ -63,6 +52,7 @@ function Checkout () {
     const addOrder = async (e) => {
         e.preventDefault();
 
+        //Configure new order
         const myOrder = {
             order_id: Math.random().toString().substring(3),
             user_email : inputMail,
@@ -76,27 +66,27 @@ function Checkout () {
             payment_method : inputPaymentMethod
         }
 
-        //Save order en DB, save order in state
+        //Save order in DB, save order in state, show alert
         const ordersCollectionRef = collection(db, "orders");
         await addDoc(ordersCollectionRef, myOrder).then(({ id }) => {
             setOrder(myOrder);
             const msg = `Congratulations! Your purchase #${id} has been confirmed!`    
             console.log(msg);
-            // toast.info(msg, {position: toast.POSITION.BOTTOM_CENTER});
             
             Swal.fire({
                 icon: "success",
                 title: "Contratulations!",
-                text: `Your purchase #${id} has been confirmed!` 
-              });
-
+                text: `Your purchase #${id} has been confirmed!` ,
+                allowOutsideClick: false,
+                confirmButtonColor: '#f0ad4e',
+                confirmButtonText: 'Continue'
+              }).then(function() {
+                    window.location.href = "/";         
+            });
         });
         const data = await getDocs(ordersCollectionRef);
         setOrders(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-          
-        setPurchaseOk(true);
-        console.log ("set purchase to ok", purchaseOk)
-       
+                 
         //Empty cart to start again
         emptyCart();
         setInputName("");
@@ -111,11 +101,7 @@ function Checkout () {
 
     return (
         <>
-        {/* {purchaseOk && <AlertDismissible orderId={order.order_id}/> } */}
-        {purchaseOk && <ShowConfirmation myOrder={order}/>}
-
         <Container>
-
             <br></br>
             <h4> Please complete your contact info</h4>
             <Row>
@@ -198,22 +184,10 @@ function Checkout () {
             </Row>
             
             <div className="d-grid gap-2 col-6 mx-auto">
-            <button className="btn btn-warning btn-lg" onClick={addOrder}>Purchase ${cartPrice} </button>
-
-            {/* <Link to ="/confirm_purchase">
-                <button className="btn btn-warning btn-lg" >Purchase ${cartPrice} </button>
-            </Link> */}
-
+                <button className="btn btn-warning btn-lg" onClick={addOrder}>Purchase ${cartPrice} </button>
             </div>
 
-            {/* <ShowConfirmation myOrder={order}/> */}
-
-            {/* <ToastContainer position="bottom-center" autoClose={6000} /> */}
-            
-           
         </Container>
-
-
         </>
     )
 }

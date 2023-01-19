@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Stack from 'react-bootstrap/Stack';
 
 function CartWidget(){
-
     const {cartQuantity, cartPrice } = useContext(CartContext);
     
     return (
@@ -20,8 +19,6 @@ function CartWidget(){
                     {cartQuantity > 0 && <div> ${cartPrice}   ({cartQuantity})   </div>}
                 </div>
             </Stack>
-            
     )
-
 }
 export default CartWidget

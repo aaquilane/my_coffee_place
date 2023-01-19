@@ -28,7 +28,7 @@ function Orders(){
         if (orders.length == 0)
             return <EmptyEntity message = {"You haven't made a purchase yet"} />
         else
-        return (
+            return (
             <Container > 
                 <h4> My purchases </h4>
                 <Table responsive="sm" striped>
@@ -42,14 +42,12 @@ function Orders(){
                             <th>Payment method</th>
                         </tr>
                     </thead>
-
                     <tbody>
                         {orders.map((order, i) => {
                             return <OrderLine key={order.id} myorder={order} />;
                         })}
                     </tbody>
                 </Table>   
-             
             </Container>
         )
 }

@@ -23,7 +23,6 @@ function OrderDetail ({myOrder}){
                         {myOrder.products.length > 0 && myOrder.products.map((product, i) => {
                         return <CartProductLine key={product.product_id} product={product}></CartProductLine>
                         })}
-
                         <tr>
                             <td></td>
                             <td></td>
@@ -32,9 +31,7 @@ function OrderDetail ({myOrder}){
                             <td> </td>
                         </tr>
                     </tbody>
-
                 </Table>
-                
             </Container>
     )
 }

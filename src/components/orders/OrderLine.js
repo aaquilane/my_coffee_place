@@ -1,5 +1,4 @@
 function OrderLine ({myorder}){
-
     let productString = ""
     if (myorder.products.length > 0) {
         myorder.products.forEach(prod => {

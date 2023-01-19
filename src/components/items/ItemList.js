@@ -1,4 +1,4 @@
-import ItemListView from "../itemListView/ItemListView";
+import ItemListView from "./ItemListView";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';

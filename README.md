@@ -1,5 +1,15 @@
 # Project
-This is the e-commerce for My Coffee Place
+This is the e-commerce project for a coffee shop, developed in ReactJS.
+
+## Specifications
+Bootstrap React Js was used for the UI.
+Product categories and products are sourced from Firestore.
+Category navigation bar is dynamically presented from Firestore.
+React Router is used to manage the navigation paths of the application.
+When accessing the shopping cart detail, user information is also included with complementary data to finalize the purchase.
+The shopping cart is implemented with Context to be used in the CartWidget and CartDetail.
+As a result of the purchase, the information is preserved in Firestore and a message is presented with the id of the purchase made, using Sweetalert2.
+It is also possible to access the list of purchases made. Since no user authentication was implemented, all generated purchases are displayed, and not those of a particular user.
 
 
 # Installation
