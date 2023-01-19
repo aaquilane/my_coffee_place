@@ -5,6 +5,7 @@ import EmptyEntity from "../EmptyEntity.js";
 import OrderLine from "./OrderLine.js";
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
 import Loading from "../Loading.js";
 function Orders(){
 
@@ -30,8 +31,12 @@ function Orders(){
         else
             return (
             <Container > 
-                <h4> My purchases </h4>
-                <Table responsive="sm" striped>
+            <Card>
+                <Card.Body>
+                    <Card.Title>
+                        <h4> My purchases </h4>
+                    </Card.Title>
+                    <Table responsive="sm" striped>
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -47,7 +52,9 @@ function Orders(){
                             return <OrderLine key={order.id} myorder={order} />;
                         })}
                     </tbody>
-                </Table>   
+                </Table> 
+                </Card.Body>
+            </Card>  
             </Container>
         )
 }

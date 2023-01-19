@@ -5,7 +5,7 @@ function Loading() {
 
   return (
     <div style={style}>
-      <Spinner animation="border" role="status" >
+      <Spinner variant="warning" animation="border"  role="status" >
             <span className="visually-hidden">Loading...</span>
       </Spinner>
     </div>

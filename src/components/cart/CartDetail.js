@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 import CartProductLine from "./CartProductLine";
-import Checkout from "./Checkout";
+import Checkout from "../checkout/Checkout";
 import EmptyEntity from "../EmptyEntity";
 import Table from 'react-bootstrap/Table';
 import Container from 'react-bootstrap/Container';
@@ -14,7 +14,7 @@ function CartDetail (){
         <>
         {(cartQuantity == 0) ?
             (<Container > 
-                <EmptyEntity message = {"Your cart is empty!"} />
+                <EmptyEntity message = {"Now your cart is empty!"} />
             </Container>)
             :
             ( <Container > 

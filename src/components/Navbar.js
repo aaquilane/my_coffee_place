@@ -9,10 +9,10 @@ function NavigationBar({categories}){
     return (
         <Container  > 
             <Navbar bg="white" >
-                <Nav >
+                <Nav className="me-auto">
                     {categories.map((category, i) => {
                         let ruta = "/category/" + category.category_name
-                        return  <ul key={category.category_name} > <Link to={ruta}> {category.category_name}</Link></ul>;
+                        return  <ul key={category.category_name} > <Link style={{textDecoration: 'none', color: 'brown'}} to={ruta}> {category.category_name}</Link></ul>;
                     })}
                 </Nav>
             </Navbar>

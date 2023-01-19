@@ -11,7 +11,7 @@ function Header({categ}){
           <Stack direction="horizontal" gap={3}>
             <div >
                 <Container fluid > 
-                  <Link to="/">
+                  <Link style={{textDecoration: 'none', color: 'brown'}} to="/">
                     <img src={logo} width="60" height="60" /><b >My Coffee Place</b>
                   </Link>
                 </Container>

@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom"
-import { useState, useRef, useContext } from "react";
+import { useState, useRef, useContext, useEffect } from "react";
 import { CartContext } from "../contexts/CartContext";
 import EmptyEntity from "../EmptyEntity";
 import Container from 'react-bootstrap/Container';
@@ -15,9 +15,17 @@ function ItemDetail ({menu}){
 
     const { addProduct } = useContext(CartContext);
 
+    useEffect(() => {
+        setProductQuantity(productQuantity);
+      }, [productQuantity]);
+
     const handleQtyChange = () => {
         let qtyToAdd = parseInt(quantityRef.current.value);
         setProductQuantity(qtyToAdd);
+    }
+
+    const handleAddProductToCart = () => {
+        let qtyToAdd = parseInt(quantityRef.current.value);
         addProduct (product, qtyToAdd); 
     }
 
@@ -39,14 +47,19 @@ function ItemDetail ({menu}){
                                 <h1>${product.price}</h1>
                                 <h5 className="text-danger">{product.discount} OFF - <del className="text-secondary"> {product.original_price}</del></h5>
                                 <br></br>
-                                <br></br>
         
-                                <input ref={quantityRef} type="number" id="typeNumber"  min="1" max="100" autoFocus />
-                                {/* <p>Your are adding {productQuantity} products to cart</p> */}
-                                <br></br>
+                                <input ref={quantityRef}
+                                        type="number" 
+                                        id="typeNumber"  
+                                        min="1" 
+                                        max="100" 
+                                        autoFocus
+                                        onChange={handleQtyChange} 
+                                        />
+                                <p>Your are adding {productQuantity} products to cart</p>
                                 <br></br>
                                
-                                <button className="btn btn-warning" onClick={handleQtyChange}>Add to cart</button>
+                                <button className="btn btn-warning" onClick={handleAddProductToCart}>Add to cart</button>
                                 <br></br>
                                 <br></br>
                                 <Link to="/">
@@ -55,7 +68,7 @@ function ItemDetail ({menu}){
                             </Col>
                         </Row>
                     </Card>
-                    </Container>
+                </Container>
                 )
             }
         </>
